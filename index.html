@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- محاكاة الهاتف -->
+<div class="phone-wrapper">
+    <div class="phone">
+
+        <!-- شاشة الهاتف -->
+        <div class="screen">
+
+            <!-- رأس الشات -->
+            <div class="chat-header">
+                <img src="logo.jpg" alt="Logo" class="chat-logo">
+                <span class="chat-title">المساعد الذكي</span>
+            </div>
+
+            <!-- صندوق الرسائل -->
+            <div class="chat-box" id="chat-box">
+                <div class="chat-bubble bot">
+                    مرحبًا 👋 كيف أقدر أساعدك اليوم؟
+                </div>
+            </div>
+
+            <!-- إدخال النص -->
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    placeholder="اكتب سؤالك هنا..."
+                    onkeypress="if(event.key === 'Enter'){getAnswer()}"
+                >
+                <button onclick="getAnswer()">إرسال</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
